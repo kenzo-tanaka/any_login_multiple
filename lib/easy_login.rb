@@ -7,6 +7,8 @@ module EasyLogin
   autoload :Helpers
 
   mattr_accessor :klass_names
+  @@klass_names = ['User']
+
   mattr_accessor :klass_name
 
   def self.klasses
