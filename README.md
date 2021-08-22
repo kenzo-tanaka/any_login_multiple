@@ -5,6 +5,9 @@ This gem supports multiple model support.
 
 ## Installation
 
+First of all, this gem only work in an environment
+where [devise](https://github.com/heartcombo/devise) is installed.
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -16,6 +19,12 @@ end
 And then execute:
 ```bash
 $ bundle install
+```
+
+Add `config/initializers/easy_login.rb` and set `klass_names`:
+
+```rb
+EasyLogin.klass_names = ['User', 'Staff']
 ```
 
 ## Usage
