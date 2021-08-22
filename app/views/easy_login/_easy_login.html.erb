@@ -28,8 +28,8 @@
 </style>
 
 <script type="text/javascript" charset="utf-8">
-  const EasyLogin = {};
-  EasyLogin.display_forms = () => {
+  window.EasyLogin = window.EasyLogin || {};
+  window.EasyLogin.display_forms = () => {
     const trigger = document.querySelector('.easy-login-trigger');
     trigger.addEventListener('click', () => {
       const formBox = document.querySelector('.easy-login-forms-container');
@@ -42,5 +42,5 @@
       }
     })
   }
-  EasyLogin.display_forms();
+  window.EasyLogin.display_forms();
 </script>
