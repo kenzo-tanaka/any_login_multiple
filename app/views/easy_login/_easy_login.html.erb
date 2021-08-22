@@ -1,4 +1,4 @@
-<div>
+<div class="easy-login-wrapper">
   <% EasyLogin.klass_names.each do |klass_name| %>
     <%= form_with url: easy_login.sign_in_path(as: klass_name), method: :post do |form| %>
       <%= form.label klass_name %>
@@ -7,3 +7,15 @@
     <% end %>
   <% end %>
 </div>
+
+<style>
+  .easy-login-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: #5c4383;
+      color: white;
+      z-index: 100;
+      padding: 5px 10px;
+  }
+</style>
