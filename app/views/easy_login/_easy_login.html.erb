@@ -1,0 +1,6 @@
+<div>
+  <%= form_with url: easy_login.sign_in_path, method: :post do |form| %>
+    <%= form.number_field :id %>
+    <%= form.submit 'Submit' %>
+  <% end %>
+</div>
