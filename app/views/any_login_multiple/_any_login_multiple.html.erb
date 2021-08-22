@@ -1,8 +1,8 @@
 <div class="easy-login-wrapper" style="opacity: 70%;">
   <a class="easy-login-trigger">Display Form</a>
   <div class="easy-login-forms-container" style='display: none;'>
-    <% EasyLogin.klass_names.each do |klass_name| %>
-      <%= form_with url: easy_login.sign_in_path(as: klass_name), class: 'easy-login-form', method: :post do |form| %>
+    <% AnyLoginMultiple.klass_names.each do |klass_name| %>
+      <%= form_with url: any_login_multiple.sign_in_path(as: klass_name), class: 'easy-login-form', method: :post do |form| %>
         <label>
           <%= klass_name %>
         </label>

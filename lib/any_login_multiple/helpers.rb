@@ -3,7 +3,7 @@ module AnyLoginMultiple
     # extend ActiveSupport::Concern
 
     def easy_login_here
-      render 'easy_login/easy_login'
+      render 'any_login_multiple/any_login_multiple'
     end
   end
 end

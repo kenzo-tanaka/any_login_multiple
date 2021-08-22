@@ -1,4 +1,4 @@
-# EasyLogin
+# AnyLoginMultiple
 
 This gem is inspired by [any_login](https://github.com/igorkasyanchuk/any_login).
 This gem supports multiple model support.

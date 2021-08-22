@@ -1,7 +1,7 @@
 require "test_helper"
 
-class EasyLoginTest < ActiveSupport::TestCase
+class AnyLoginMultipleTest < ActiveSupport::TestCase
   test "it has a version number" do
-    assert EasyLogin::VERSION
+    assert AnyLoginMultiple::VERSION
   end
 end

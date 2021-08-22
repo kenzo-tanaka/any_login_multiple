@@ -1,4 +1,4 @@
-module EasyLogin
+module AnyLoginMultiple
   class ApplicationController < ActionController::Base
     def easy_login
       reset_session
