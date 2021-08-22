@@ -12,7 +12,8 @@ Gem::Specification.new do |spec|
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+
+  spec.add_development_dependency "devise"
 
   spec.metadata["homepage_uri"] = 'https://github.com/kenzo-tanaka/easy_login'
   spec.metadata["source_code_uri"] = 'https://github.com/kenzo-tanaka/easy_login'
