@@ -1,6 +1,8 @@
 module EasyLogin
   class ApplicationController < ActionController::Base
     def easy_login
+      reset_session
+
       klass_string = params[:as]
       @user = klass_string.constantize.find(params[:id])
 
