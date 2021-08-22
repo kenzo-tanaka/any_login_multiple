@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  mount EasyLogin::Engine => "/easy_login"
+  devise_for :staffs
+  devise_for :users
+  root to: 'welcome#index'
 end
