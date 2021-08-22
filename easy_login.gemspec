@@ -1,4 +1,4 @@
-require_relative "lib/easy_login/version"
+require_relative "lib/any_login_multiple/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "any_login_multiple"

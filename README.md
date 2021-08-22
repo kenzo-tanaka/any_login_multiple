@@ -12,7 +12,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem 'easy_login'
+  gem 'any_login_multiple'
 end
 ```
 
@@ -21,10 +21,10 @@ And then execute:
 $ bundle install
 ```
 
-Add `config/initializers/easy_login.rb` and set `klass_names`:
+Add `config/initializers/any_login_multiple.rb` and set `klass_names`:
 
 ```rb
-EasyLogin.klass_names = ['User', 'Staff']
+AnyLoginMultiple.klass_names = ['User', 'Staff']
 ```
 
 ## Usage

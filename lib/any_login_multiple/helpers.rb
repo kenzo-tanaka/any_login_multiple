@@ -1,4 +1,4 @@
-module EasyLogin
+module AnyLoginMultiple
   module Helpers
     # extend ActiveSupport::Concern
 
