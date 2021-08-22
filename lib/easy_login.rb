@@ -3,13 +3,13 @@ require "easy_login/engine"
 
 module EasyLogin
   extend ActiveSupport::Autoload
-
   autoload :Helpers
 
-  mattr_accessor :klass_name
+  mattr_accessor :klass_names
+  @@klass_names = ['User']
 
-  def self.klass
-    @@klass = EasyLogin.klass_name.constantize
+  def self.klasses
+    @@klasses = EasyLogin.klass_names.map(&:constantize)
   end
 end
 

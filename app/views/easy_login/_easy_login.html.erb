@@ -1,6 +1,9 @@
 <div>
-  <%= form_with url: easy_login.sign_in_path, method: :post do |form| %>
-    <%= form.number_field :id %>
-    <%= form.submit 'Submit' %>
+  <% EasyLogin.klass_names.each do |klass_name| %>
+    <%= form_with url: easy_login.sign_in_path(as: klass_name), method: :post do |form| %>
+      <%= form.label klass_name %>
+      <%= form.number_field :id %>
+      <%= form.submit 'Submit' %>
+    <% end %>
   <% end %>
 </div>
