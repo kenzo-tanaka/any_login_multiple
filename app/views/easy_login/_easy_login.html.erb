@@ -1,4 +1,4 @@
-<div class="easy-login-wrapper">
+<div class="easy-login-wrapper" style="opacity: 70%;">
   <a class="easy-login-trigger">Display Form</a>
   <div class="easy-login-forms-container" style='display: none;'>
     <% EasyLogin.klass_names.each do |klass_name| %>
@@ -29,15 +29,20 @@
 
 <script type="text/javascript" charset="utf-8">
   window.EasyLogin = window.EasyLogin || {};
+
   window.EasyLogin.display_forms = () => {
     const trigger = document.querySelector('.easy-login-trigger');
+    const wrapper = document.querySelector('.easy-login-wrapper')
+
     trigger.addEventListener('click', () => {
       const formBox = document.querySelector('.easy-login-forms-container');
       if (formBox.style.display == 'none') {
         formBox.style.display = 'block'
+        wrapper.style.opacity = '100%'
         trigger.textContent = 'Hide Form'
       } else {
         formBox.style.display = 'none'
+        wrapper.style.opacity = '70%'
         trigger.textContent = 'Display Form'
       }
     })
