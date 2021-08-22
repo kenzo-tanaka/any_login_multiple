@@ -10,3 +10,7 @@
 /test/dummy/tmp/
 .byebug_history
 .idea
+**/*.sqlite3
+.DS_Store
+
+*.gem
