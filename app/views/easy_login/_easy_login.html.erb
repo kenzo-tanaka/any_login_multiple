@@ -2,7 +2,7 @@
   <a class="easy-login-trigger">Display Form</a>
   <div class="easy-login-forms-container" style='display: none;'>
     <% EasyLogin.klass_names.each do |klass_name| %>
-      <%= form_with url: easy_login.sign_in_path(as: klass_name), method: :post do |form| %>
+      <%= form_with url: easy_login.sign_in_path(as: klass_name), class: 'easy-login-form', method: :post do |form| %>
         <label>
           <%= klass_name %>
         </label>
@@ -31,6 +31,18 @@
 
 <script type="text/javascript" charset="utf-8">
   window.EasyLogin = window.EasyLogin || {};
+
+  window.EasyLogin.on_select_change = () => {
+    const easyLoginForm = document.querySelectorAll('.easy-login-form');
+    easyLoginForm.forEach(form => {
+      const select = form.querySelector('select')
+      select.addEventListener('change', () => {
+        form.submit();
+      })
+    })
+  }
+
+  window.EasyLogin.on_select_change();
 
   window.EasyLogin.display_forms = () => {
     const trigger = document.querySelector('.easy-login-trigger');
