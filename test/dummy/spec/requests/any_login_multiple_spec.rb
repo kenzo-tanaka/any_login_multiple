@@ -11,7 +11,7 @@ RSpec.describe 'AnyLoginMultiple', type: :request do
       end
 
       it 'after sign in, contain user email' do
-        post easy_login.sign_in_path, params: { as: 'User', id: 1 }
+        post any_login_multiple.sign_in_path, params: { as: 'User', id: 1 }
         get '/'
         expect(response.body).to include 'example@example.com'
       end
@@ -26,7 +26,7 @@ RSpec.describe 'AnyLoginMultiple', type: :request do
       end
 
       it 'after sign in, contain staff email' do
-        post easy_login.sign_in_path, params: { as: 'Staff', id: 1 }
+        post any_login_multiple.sign_in_path, params: { as: 'Staff', id: 1 }
         get '/'
         expect(response.body).to include 'example-staff@example.com'
       end
