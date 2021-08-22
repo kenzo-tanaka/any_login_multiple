@@ -6,3 +6,5 @@ module EasyLogin
 
   autoload :Helpers
 end
+
+require 'easy_login/routes'
