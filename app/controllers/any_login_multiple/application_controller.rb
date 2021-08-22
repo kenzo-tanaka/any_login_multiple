@@ -1,6 +1,6 @@
 module AnyLoginMultiple
   class ApplicationController < ActionController::Base
-    def easy_login
+    def any_login_multiple
       reset_session
 
       klass_string = params[:as]
