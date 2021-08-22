@@ -1,4 +1,5 @@
 <div>
-  <%= form_with url: easy_login.sign_in_path, method: :post do %>
+  <%= form_with url: easy_login.sign_in_path, method: :post do |form| %>
+    <%= form.submit 'Submit' %>
   <% end %>
 </div>
