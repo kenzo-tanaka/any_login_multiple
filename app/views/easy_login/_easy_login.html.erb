@@ -1,11 +1,14 @@
 <div class="easy-login-wrapper">
-  <% EasyLogin.klass_names.each do |klass_name| %>
-    <%= form_with url: easy_login.sign_in_path(as: klass_name), method: :post do |form| %>
-      <%= form.label klass_name %>
-      <%= form.number_field :id %>
-      <%= form.submit 'Submit' %>
+  <a class="easy-login-trigger">Display Form</a>
+  <div class="easy-login-forms-container" style='display: none;'>
+    <% EasyLogin.klass_names.each do |klass_name| %>
+      <%= form_with url: easy_login.sign_in_path(as: klass_name), method: :post do |form| %>
+        <%= form.label klass_name %>
+        <%= form.number_field :id %>
+        <%= form.submit 'Submit' %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 <style>
@@ -18,4 +21,26 @@
       z-index: 100;
       padding: 5px 10px;
   }
+  .easy-login-trigger {
+      color: white;
+      cursor: pointer;
+  }
 </style>
+
+<script type="text/javascript" charset="utf-8">
+  const EasyLogin = {};
+  EasyLogin.display_forms = () => {
+    const trigger = document.querySelector('.easy-login-trigger');
+    trigger.addEventListener('click', () => {
+      const formBox = document.querySelector('.easy-login-forms-container');
+      if (formBox.style.display == 'none') {
+        formBox.style.display = 'block'
+        trigger.textContent = 'Hide Form'
+      } else {
+        formBox.style.display = 'none'
+        trigger.textContent = 'Display Form'
+      }
+    })
+  }
+  EasyLogin.display_forms();
+</script>
