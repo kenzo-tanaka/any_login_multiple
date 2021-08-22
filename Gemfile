@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in easy_login.gemspec.
+# Specify your gem's dependencies in any_login_multiple.gemspec.
 gemspec
-
 
 group :development do
   gem 'sqlite3'

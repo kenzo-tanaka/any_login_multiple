@@ -1,3 +1,3 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
-//= link easy_login_manifest.js
+//= link any_login_multiple_manifest.js

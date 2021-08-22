@@ -1,5 +1,5 @@
-EasyLogin::Engine.routes.draw do
-  post '/easy_login/sign_in', to: 'application#easy_login', as: :sign_in
+AnyLoginMultiple::Engine.routes.draw do
+  post '/any_login_multiple/sign_in', to: 'application#any_login_multiple', as: :sign_in
 end
 
 Rails.application.routes.draw do

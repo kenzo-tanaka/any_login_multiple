@@ -1,0 +1,65 @@
+<div class="any-login-multiple-wrapper" style="opacity: 70%;">
+  <a class="any-login-multiple-trigger">Display Form</a>
+  <div class="any-login-multiple-forms-container" style='display: none;'>
+    <% AnyLoginMultiple.klass_names.each do |klass_name| %>
+      <%= form_with url: any_login_multiple.sign_in_path(as: klass_name), class: 'any-login-multiple-form', method: :post do |form| %>
+        <label>
+          <%= klass_name %>
+        </label>
+        <%= form.select :id, klass_name.constantize.pluck(:email, :id) %>
+        <%= form.submit 'Submit' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<style>
+  .any-login-multiple-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: #5c4383;
+      color: white;
+      z-index: 100;
+      padding: 5px 10px;
+  }
+  .any-login-multiple-trigger {
+      color: white;
+      cursor: pointer;
+  }
+</style>
+
+<script type="text/javascript" charset="utf-8">
+  window.AnyLoginMultiple = window.AnyLoginMultiple || {};
+
+  window.AnyLoginMultiple.on_select_change = () => {
+    const anyLoginMultipleForm = document.querySelectorAll('.any-login-multiple-form');
+    anyLoginMultipleForm.forEach(form => {
+      const select = form.querySelector('select')
+      select.addEventListener('change', () => {
+        form.submit();
+      })
+    })
+  }
+
+  window.AnyLoginMultiple.on_select_change();
+
+  window.AnyLoginMultiple.display_forms = () => {
+    const trigger = document.querySelector('.any-login-multiple-trigger');
+    const wrapper = document.querySelector('.any-login-multiple-wrapper')
+
+    trigger.addEventListener('click', () => {
+      const formBox = document.querySelector('.any-login-multiple-forms-container');
+      if (formBox.style.display == 'none') {
+        formBox.style.display = 'block'
+        wrapper.style.opacity = '100%'
+        trigger.textContent = 'Hide Form'
+      } else {
+        formBox.style.display = 'none'
+        wrapper.style.opacity = '70%'
+        trigger.textContent = 'Display Form'
+      }
+    })
+  }
+  window.AnyLoginMultiple.display_forms();
+</script>
