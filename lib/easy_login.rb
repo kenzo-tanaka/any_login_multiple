@@ -6,8 +6,14 @@ module EasyLogin
 
   autoload :Helpers
 
+  mattr_accessor :klass_names
   mattr_accessor :klass_name
 
+  def self.klasses
+    @@klasses = EasyLogin.klass_names.map(&:constantize)
+  end
+
+  # TODO: remove me
   def self.klass
     @@klass = EasyLogin.klass_name.constantize
   end
