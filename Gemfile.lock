@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easy_login (0.1.0)
+    any_login_multiple (0.1.0)
       rails (~> 6.1.4, >= 6.1.4.1)
 
 GEM
@@ -173,8 +173,8 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  any_login_multiple!
   devise
-  easy_login!
   factory_bot_rails
   rspec-rails (~> 5.0.0)
   sqlite3

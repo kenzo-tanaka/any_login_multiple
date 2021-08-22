@@ -1,7 +1,7 @@
 require_relative "lib/easy_login/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "easy_login"
+  spec.name        = "any_login_multiple"
   spec.version     = EasyLogin::VERSION
   spec.authors     = ["kenzo-tanaka"]
   spec.email       = ["kenzou.kenzou104809@gmail.com"]
