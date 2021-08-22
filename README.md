@@ -32,7 +32,7 @@ AnyLoginMultiple.klass_names = ['User', 'Staff']
 Add this line to `application.html.erb`:
 
 ```erb
-<%= easy_login_here if Rails.env.development? %>
+<%= any_login_multiple_here if Rails.env.development? %>
 ```
 
 ## License
