@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = EasyLogin::VERSION
   spec.authors     = ["kenzo-tanaka"]
   spec.email       = ["kenzou.kenzou104809@gmail.com"]
-  spec.homepage    = "https://github.com/kenzo-tanaka/easy_login"
+  spec.homepage    = "https://github.com/kenzo-tanaka/any_login_multiple"
   spec.summary     = "Easy login with devise, multiple model"
   spec.description = "Easy login with devise, multiple model"
   spec.license     = "MIT"
@@ -15,9 +15,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "devise"
 
-  spec.metadata["homepage_uri"] = 'https://github.com/kenzo-tanaka/easy_login'
-  spec.metadata["source_code_uri"] = 'https://github.com/kenzo-tanaka/easy_login'
-  spec.metadata["changelog_uri"] = "https://github.com/kenzo-tanaka/easy_login/blob/main/CHANGELOG.md"
+  spec.metadata["homepage_uri"] = 'https://github.com/kenzo-tanaka/any_login_multiple'
+  spec.metadata["source_code_uri"] = 'https://github.com/kenzo-tanaka/any_login_multiple'
+  spec.metadata["changelog_uri"] = "https://github.com/kenzo-tanaka/any_login_multiple/blob/main/CHANGELOG.md"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
