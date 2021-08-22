@@ -20,12 +20,12 @@ RSpec.describe 'EasyLogin', type: :request do
     context 'Staff login' do
       let!(:staff) { create(:staff, email: 'example-staff@example.com') }
 
-      it 'before sign in, not contain user email' do
+      it 'before sign in, not contain staff email' do
         get '/'
         expect(response.body).not_to include 'example-staff@example.com'
       end
 
-      it 'after sign in, contain user email' do
+      it 'after sign in, contain staff email' do
         post easy_login.sign_in_path, params: { as: 'Staff', id: 1 }
         get '/'
         expect(response.body).to include 'example-staff@example.com'
