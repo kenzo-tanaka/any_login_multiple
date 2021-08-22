@@ -12,6 +12,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
 end
 
 # To use a debugger
