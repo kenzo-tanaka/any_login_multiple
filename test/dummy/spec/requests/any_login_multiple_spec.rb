@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'EasyLogin', type: :request do
+RSpec.describe 'AnyLoginMultiple', type: :request do
   describe 'POST sign_in' do
     context 'User login' do
       let!(:user) { create(:user, email: 'example@example.com') }
