@@ -1,8 +1,8 @@
-<div class="easy-login-wrapper" style="opacity: 70%;">
-  <a class="easy-login-trigger">Display Form</a>
-  <div class="easy-login-forms-container" style='display: none;'>
+<div class="any-login-multiple-wrapper" style="opacity: 70%;">
+  <a class="any-login-multiple-trigger">Display Form</a>
+  <div class="any-login-multiple-forms-container" style='display: none;'>
     <% AnyLoginMultiple.klass_names.each do |klass_name| %>
-      <%= form_with url: any_login_multiple.sign_in_path(as: klass_name), class: 'easy-login-form', method: :post do |form| %>
+      <%= form_with url: any_login_multiple.sign_in_path(as: klass_name), class: 'any-login-multiple-form', method: :post do |form| %>
         <label>
           <%= klass_name %>
         </label>
@@ -14,7 +14,7 @@
 </div>
 
 <style>
-  .easy-login-wrapper {
+  .any-login-multiple-wrapper {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -23,18 +23,18 @@
       z-index: 100;
       padding: 5px 10px;
   }
-  .easy-login-trigger {
+  .any-login-multiple-trigger {
       color: white;
       cursor: pointer;
   }
 </style>
 
 <script type="text/javascript" charset="utf-8">
-  window.EasyLogin = window.EasyLogin || {};
+  window.AnyLoginMultiple = window.AnyLoginMultiple || {};
 
-  window.EasyLogin.on_select_change = () => {
-    const easyLoginForm = document.querySelectorAll('.easy-login-form');
-    easyLoginForm.forEach(form => {
+  window.AnyLoginMultiple.on_select_change = () => {
+    const anyLoginMultipleForm = document.querySelectorAll('.any-login-multiple-form');
+    anyLoginMultipleForm.forEach(form => {
       const select = form.querySelector('select')
       select.addEventListener('change', () => {
         form.submit();
@@ -42,14 +42,14 @@
     })
   }
 
-  window.EasyLogin.on_select_change();
+  window.AnyLoginMultiple.on_select_change();
 
-  window.EasyLogin.display_forms = () => {
-    const trigger = document.querySelector('.easy-login-trigger');
-    const wrapper = document.querySelector('.easy-login-wrapper')
+  window.AnyLoginMultiple.display_forms = () => {
+    const trigger = document.querySelector('.any-login-multiple-trigger');
+    const wrapper = document.querySelector('.any-login-multiple-wrapper')
 
     trigger.addEventListener('click', () => {
-      const formBox = document.querySelector('.easy-login-forms-container');
+      const formBox = document.querySelector('.any-login-multiple-forms-container');
       if (formBox.style.display == 'none') {
         formBox.style.display = 'block'
         wrapper.style.opacity = '100%'
@@ -61,5 +61,5 @@
       }
     })
   }
-  window.EasyLogin.display_forms();
+  window.AnyLoginMultiple.display_forms();
 </script>
