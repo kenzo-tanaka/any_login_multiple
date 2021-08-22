@@ -10,5 +10,9 @@ group :development do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+end
+
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
