@@ -2,12 +2,12 @@ require_relative "lib/any_login_multiple/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "any_login_multiple"
-  spec.version     = EasyLogin::VERSION
+  spec.version     = AnyLoginMultiple::VERSION
   spec.authors     = ["kenzo-tanaka"]
   spec.email       = ["kenzou.kenzou104809@gmail.com"]
   spec.homepage    = "https://github.com/kenzo-tanaka/any_login_multiple"
-  spec.summary     = "Easy login with devise, multiple model"
-  spec.description = "Easy login with devise, multiple model"
+  spec.summary     = "Easy way to login with devise, multiple model"
+  spec.description = "Easy way to login with devise, multiple model"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
