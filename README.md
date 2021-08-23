@@ -3,6 +3,8 @@
 This gem is inspired by [any_login](https://github.com/igorkasyanchuk/any_login).
 This gem supports multiple models.
 
+![any-login-multiple-demo-v2](https://user-images.githubusercontent.com/33926355/130531912-5332fd94-078d-4d91-bdda-9f92bbe9da39.gif)
+
 ## Installation
 
 **First of all, this gem only work in an environment
