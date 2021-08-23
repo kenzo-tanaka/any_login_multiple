@@ -20,6 +20,4 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/kenzo-tanaka/any_login_multiple/blob/main/CHANGELOG.md"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
-
-  spec.add_dependency "rails", "~> 6.1.4", ">= 6.1.4.1"
 end
