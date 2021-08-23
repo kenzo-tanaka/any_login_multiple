@@ -5,13 +5,13 @@ This gem supports multiple models.
 
 ## Installation
 
-First of all, this gem only work in an environment
-where [devise](https://github.com/heartcombo/devise) is installed.
+**First of all, this gem only work in an environment
+where [devise](https://github.com/heartcombo/devise) is installed.**
 
 Add this line to your application's Gemfile:
 
 ```ruby
-group :development do
+group :development, :test do
   gem 'any_login_multiple'
 end
 ```
@@ -19,6 +19,12 @@ end
 And then execute:
 ```bash
 $ bundle install
+```
+
+Add this line to `routes.rb`:
+
+```rb
+mount AnyLoginMultiple::Engine => '/any_login_multiple' if Rails.env.development?
 ```
 
 Add `config/initializers/any_login_multiple.rb` and set `klass_names`:
