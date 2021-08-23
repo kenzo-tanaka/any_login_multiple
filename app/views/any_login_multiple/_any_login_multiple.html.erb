@@ -6,7 +6,7 @@
         <label>
           <%= klass_name %>
         </label>
-        <%= form.select :id, klass_name.constantize.pluck(:email, :id) %>
+        <%= form.select :id, klass_name.constantize.pluck(:email, :id), include_blank: "Select #{klass_name}" %>
       <% end %>
     <% end %>
   </div>
