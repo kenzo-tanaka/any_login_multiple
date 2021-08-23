@@ -7,7 +7,6 @@
           <%= klass_name %>
         </label>
         <%= form.select :id, klass_name.constantize.pluck(:email, :id) %>
-        <%= form.submit 'Submit' %>
       <% end %>
     <% end %>
   </div>
@@ -19,9 +18,14 @@
       bottom: 0;
       left: 0;
       background: #5c4383;
-      color: white;
       z-index: 100;
-      padding: 5px 10px;
+      padding: 10px 5px;
+  }
+  .any-login-multiple-wrapper a, label {
+      color: white;
+  }
+  .any-login-multiple-form {
+      margin: 10px 0;
   }
   .any-login-multiple-trigger {
       color: white;
