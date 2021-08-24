@@ -13,4 +13,3 @@ module AnyLoginMultiple
   end
 end
 
-require 'any_login_multiple/routes'
