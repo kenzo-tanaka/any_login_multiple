@@ -2,7 +2,7 @@
   <a class="any-login-multiple-trigger">Display Form</a>
   <div class="any-login-multiple-forms-container" style='display: none;'>
     <% AnyLoginMultiple.klass_names.each do |klass_name| %>
-      <%= form_with url: any_login_multiple.sign_in_path(as: klass_name), class: 'any-login-multiple-form', method: :post do |form| %>
+      <%= form_with url: any_login_multiple.any_login_multiple_sign_in_path(as: klass_name), class: 'any-login-multiple-form', method: :post do |form| %>
         <label>
           <%= klass_name %>
         </label>
