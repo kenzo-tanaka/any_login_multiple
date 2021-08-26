@@ -29,10 +29,12 @@ Add this line to `routes.rb`:
 mount AnyLoginMultiple::Engine => '/any_login_multiple' if Rails.env.development?
 ```
 
-Add `config/initializers/any_login_multiple.rb` and set `klass_names`:
+Add this lines to `config/environments/development.rb`:
 
 ```rb
-AnyLoginMultiple.klass_names = ['User', 'Staff']
+config.after_initialize do
+  AnyLoginMultiple.klass_names = ['User', 'Staff']
+end
 ```
 
 ## Usage
